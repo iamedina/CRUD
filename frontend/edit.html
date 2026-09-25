@@ -26,8 +26,14 @@
                         type="text" class="form-control" id="plataforma" required></div>
                 <div class="field"><label for="usuario"><i class="bi bi-person"></i>Usuario</label><input type="text"
                         class="form-control" id="usuario" required></div>
-                <div class="field"><label for="clave"><i class="bi bi-lock"></i>Contraseña</label><input type="password"
-                        class="form-control" id="clave" required></div>
+                <div class="field"><label for="clave"><i class="bi bi-lock"></i>Contraseña</label>
+                    <div class="password-input-wrap">
+                        <input type="password" class="form-control" id="clave" required>
+                        <button type="button" class="password-toggle" id="toggle-password" aria-label="Mostrar contraseña">
+                            <i class="bi bi-eye-slash"></i>
+                        </button>
+                    </div>
+                </div>
                 <div class="form-actions"><a class="btn-secondary" href="index.html"><i
                             class="bi bi-arrow-left"></i>Cancelar</a><button class="btn btn-primary" type="submit"><i
                             class="bi bi-check-lg"></i>Guardar cambios</button></div>
@@ -41,7 +47,8 @@
             return params.get(name) || '';
         }
         var variable1 = getParameterByName('variable1');
-        consulta_individual(variable1)
+        consulta_individual(variable1);
+        setupPasswordToggle();
     </script>
 </body>
 

@@ -38,6 +38,10 @@ h1 { margin:0; font-size:clamp(1.8rem,4vw,2.7rem); letter-spacing:-.04em; }
 .field label i { margin-right:7px; color:var(--primary); }
 .field input { padding:12px 14px; border-color:var(--line); border-radius:8px; }
 .field input:focus { border-color:#9db0ff; box-shadow:0 0 0 3px #e9edff; }
+.password-input-wrap { position:relative; }
+.password-input-wrap input { width:100%; padding-right:48px; }
+.password-toggle { position:absolute; top:50%; right:12px; transform:translateY(-50%); display:inline-grid; place-items:center; width:30px; height:30px; border:0; border-radius:6px; background:transparent; color:var(--muted); cursor:pointer; }
+.password-toggle:hover { background:#f1f4ff; color:var(--primary); }
 .form-actions { display:flex; justify-content:flex-end; gap:10px; margin-top:28px; }
 .btn-secondary { display:inline-flex; align-items:center; gap:8px; padding:11px 17px; border:1px solid var(--line); border-radius:8px; background:white; color:var(--ink); text-decoration:none; font-weight:600; }
 .btn-secondary:hover { background:#f6f7fa; color:var(--ink); }
