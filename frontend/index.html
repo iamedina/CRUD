@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de contraseñas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <main class="app-shell">
+        <header class="app-header">
+            <div>
+                <p class="eyebrow"><i class="bi bi-shield-lock" aria-hidden="true"></i> Espacio seguro</p>
+                <h1>Gestor de contraseñas</h1>
+                <p class="subtitle">Administra tus accesos desde un solo lugar.</p>
+            </div>
+            <a class="btn btn-primary" href="add.html"><i class="bi bi-plus-lg" aria-hidden="true"></i>Agregar
+                acceso</a>
+        </header>
+        <section class="panel" aria-labelledby="list-title">
+            <div class="panel-heading">
+                <h2 id="list-title">Accesos guardados</h2><span class="record-count">Sincronizado con la base de
+                    datos</span>
+            </div>
+            <div class="table-wrap">
+                <table class="crud-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Plataforma</th>
+                            <th>Usuario</th>
+                            <th>Contraseña</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script>consulta_general();</script>
+</body>
+
+</html>
